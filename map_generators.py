@@ -18,7 +18,7 @@ malha_a = pd.read_csv('malhas/mapa-A-1024x1024.csv')
 
 start = time.time()
 preds_l, preds_rf, preds_u = pipeline_A.run(malha_a, 'quantile')
-print('MALHA A + Quantile: ', time.time() - start)
+print('MALHA A + Quantile (em segundos): ', time.time() - start)
 
 malha_a['preds_gbt_05'] = preds_l
 malha_a['preds_rf'] = preds_rf
@@ -26,7 +26,7 @@ malha_a['preds_gbt_95'] = preds_u
 
 start = time.time()
 preds_gpr, preds_std = pipeline_A.run(malha_a, 'gaussian_process')
-print('MALHA A + GPR: ', time.time() - start)
+print('MALHA A + GPR (em segundos): ', time.time() - start)
 
 malha_a['preds_gpr'] = preds_rf
 malha_a['preds_gpr_std'] = preds_u
@@ -40,7 +40,7 @@ malha_b = pd.read_csv('malhas/mapa-B-1024x1024.csv')
 
 start = time.time()
 preds_l, preds_rf, preds_u = pipeline_B.run(malha_b, 'quantile')
-print('MALHA B + Quantile: ', time.time() - start)
+print('MALHA B + Quantile (em segundos): ', time.time() - start)
 
 malha_b['preds_gbt_05'] = preds_l
 malha_b['preds_rf'] = preds_rf
@@ -48,7 +48,7 @@ malha_b['preds_gbt_95'] = preds_u
 
 start = time.time()
 preds_gpr, preds_std = pipeline_B.run(malha_b, 'gaussian_process')
-print('MALHA B + GPR: ', time.time() - start)
+print('MALHA B + GPR (em segundos): ', time.time() - start)
 
 malha_b['preds_gpr'] = preds_rf
 malha_b['preds_gpr_std'] = preds_u
