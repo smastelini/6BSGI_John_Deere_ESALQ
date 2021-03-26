@@ -1,0 +1,6 @@
+Malha A 200x200
+MALHA A + Quantile (em segundos):  0.2802736759185791
+MALHA A + GPR (em segundos):  0.5594933032989502
+Malha B 200x200
+MALHA B + Quantile (em segundos):  0.2908046245574951
+MALHA B + GPR (em segundos):  0.5455405712127686

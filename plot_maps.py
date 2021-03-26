@@ -50,10 +50,18 @@ def plot_maps(data, model, grupo, map_id, prop='Ca'):
     plt.savefig(f'mapa_{map_id}_{grupo}_{prop}_{model}.png', bbox_inches='tight')
 
 
-mapa = pd.read_csv('predictions/malha_A_1024x1024.csv')
-plot_maps(mapa, 'rf', 'A', '1024x1024')
-plot_maps(mapa, 'gpr', 'A', '1024x1024')
+# mapa = pd.read_csv('predictions/malha_A_1024x1024.csv')
+# plot_maps(mapa, 'rf', 'A', '1024x1024')
+# plot_maps(mapa, 'gpr', 'A', '1024x1024')
+#
+# mapa = pd.read_csv('predictions/malha_B_1024x1024.csv')
+# plot_maps(mapa, 'rf', 'B', '1024x1024')
+# plot_maps(mapa, 'gpr', 'B', '1024x1024')
 
-mapa = pd.read_csv('predictions/malha_B_1024x1024.csv')
-plot_maps(mapa, 'rf', 'B', '1024x1024')
-plot_maps(mapa, 'gpr', 'B', '1024x1024')
+mapa = pd.read_csv('predictions/malha_A_200x200.csv')
+plot_maps(mapa, 'rf', 'A', '200x200')
+plot_maps(mapa, 'gpr', 'A', '200x200')
+
+mapa = pd.read_csv('predictions/malha_B_200x200.csv')
+plot_maps(mapa, 'rf', 'B', '200x200')
+plot_maps(mapa, 'gpr', 'B', '200x200')
