@@ -28,8 +28,9 @@ start = time.time()
 preds_gpr, preds_std = pipeline_A.run(malha_a, 'gaussian_process')
 print('MALHA A + GPR (em segundos): ', time.time() - start)
 
-malha_a['preds_gpr'] = preds_rf
-malha_a['preds_gpr_std'] = preds_u
+malha_a['preds_gpr_05'] = preds_gpr - 1.9600 * preds_std
+malha_a['preds_gpr'] = preds_gpr
+malha_a['preds_gpr_95'] = preds_gpr + 1.9600 * preds_std
 
 malha_a.to_csv('predictions/malha_A_1024x1024.csv', index=False)
 
@@ -50,7 +51,8 @@ start = time.time()
 preds_gpr, preds_std = pipeline_B.run(malha_b, 'gaussian_process')
 print('MALHA B + GPR (em segundos): ', time.time() - start)
 
-malha_b['preds_gpr'] = preds_rf
-malha_b['preds_gpr_std'] = preds_u
+malha_a['preds_gpr_05'] = preds_gpr - 1.9600 * preds_std
+malha_a['preds_gpr'] = preds_gpr
+malha_a['preds_gpr_95'] = preds_gpr + 1.9600 * preds_std
 
 malha_b.to_csv('predictions/malha_B_1024x1024.csv', index=False)

@@ -1,6 +1,6 @@
 Malha A 1024x1024
-MALHA A + Quantile (em segundos):  7.860785245895386
-MALHA A + GPR (em segundos):  15.69940996170044
+MALHA A + Quantile (em segundos):  7.312393426895142
+MALHA A + GPR (em segundos):  15.064931392669678
 Malha B 1024x1024
-MALHA B + Quantile (em segundos):  7.584521293640137
-MALHA B + GPR (em segundos):  16.290637016296387
+MALHA B + Quantile (em segundos):  7.378007411956787
+MALHA B + GPR (em segundos):  15.22947907447815
