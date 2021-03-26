@@ -8,6 +8,8 @@ Repositório com os códigos e dados utilizados para o desafio da John Deere/ESA
 
 1. O arquivo `feat_eng.py` cria o pipeline para e avalia as métricas de avaliação no conjunto de calibração
 2. O arquivo `generate_maps.py` usa os pipelines salvos pelo script anterior para interpolar novas malhas
+3. O arquivo `feat_importance.py` estima a importância das variáveis (de acordo com o modelo RF)
+4. O arquivo `plot_maps.py` cria scatter plots dos maps interpolados (demorado, dependendo da quantidade de pontos)
 
 ### Pastas
 - `data`: dados de entrada (calibração e validação)

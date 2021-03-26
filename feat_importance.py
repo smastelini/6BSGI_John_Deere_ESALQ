@@ -7,13 +7,13 @@ import pandas as pd
 from feat_eng import MyPipeline
 
 
-def plot_importances(rf, fig_name):
+def plot_importances(rf, fig_name, prop='Ca'):
     importances = rf.feature_importances_
     # std = np.std([tree.feature_importances_ for tree in pipeline_A._rf.estimators_], axis=0)
     indices = np.argsort(importances)[::-1]
 
     fig, ax = plt.subplots(figsize=(10, 5), dpi=300)
-    fig.suptitle('RF feature importance')
+    fig.suptitle(f'RF feature importance ({prop})')
     ax.bar(
         range(len(feature_names)), importances[indices], color='gray',
         # yerr=std[indices],
